@@ -2,8 +2,8 @@ import express from "express";
 import logger from "morgan";
 import cors from "cors";
 import "dotenv/config.js";
-import authRouter from "./routes/api/auth.js";
-import carsRouter from "./routes/api/cars.js";
+import authRouter from "./src/routes/api/auth.js";
+import carsRouter from "./src/routes/api/cars.js";
 
 const app = express();
 
