@@ -1,5 +1,5 @@
 import Car from "./Car.js";
-import { loginSchema, registerSchema, User } from "./user.js";
+import { loginSchema, registerSchema, User } from "./User.js";
 
 export {
     Car,
