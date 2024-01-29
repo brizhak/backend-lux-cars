@@ -1,11 +1,12 @@
 import express from "express";
 import {isValidId, authWrapped} from "../../middlewares/index.js";
-import { getFilteredCarsWrapped, getAllCarsWrapped, getCarByIdWrapped, getFavoritesWrapped, addFavoriteCarWrapped, deleteFavoriteCarWrapped } from "../../controllers/carControllers/index.js";
-
+import { getFilteredCarsWrapped, getBrandsWrapped, getAllCarsWrapped, getCarByIdWrapped, getFavoritesWrapped, addFavoriteCarWrapped, deleteFavoriteCarWrapped } from "../../controllers/carControllers/index.js";
 
 const carsRouter = express.Router();
 
 carsRouter.get("/", getAllCarsWrapped);
+
+carsRouter.get("/brands", getBrandsWrapped)
 
 carsRouter.post("/favorites", authWrapped, addFavoriteCarWrapped);
 
